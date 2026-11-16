@@ -25163,5 +25163,42 @@ table.vocab-table tr {
 </section>
 
   </div>
+
+<!-- ILYXX BASIC PROTECTION -->
+<style>
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+@media print {
+  body { display: none !important; }
+}
+</style>
+
+<script>
+document.addEventListener('contextmenu', e => {
+  e.preventDefault();
+});
+
+document.addEventListener('copy', e => {
+  if (!(e.target instanceof Element) ||
+      !e.target.closest('input,textarea')) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener('keydown', e => {
+  const key = e.key.toLowerCase();
+  const ctrl = e.ctrlKey || e.metaKey;
+
+  if (ctrl && ['s', 'p', 'u'].includes(key)) {
+    e.preventDefault();
+  }
+});
+</script>
 </body>
 </html>
