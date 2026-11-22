@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N3 Tango 2000 | Buku Kosakata JLPT N3 Bahasa Indonesia</title>
+  <meta name="description" content="Terjemahan lengkap buku 2000 Kosakata Penting JLPT N3 (はじめての日本語能力試験 N3単語2000) ke bahasa Indonesia. Ringan, interaktif, dilengkapi furigana, mode uji hafalan, dan indeks 50 bunyi.">
+  <meta name="theme-color" content="#FAF9F6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Langsung ke isi utama</a>
+
+  <!-- Header Bar -->
+  <header class="topbar" role="banner">
+    <div class="topbar-left">
+      <button id="btn-menu" class="icon-btn mobile-only" type="button" aria-label="Buka daftar isi" aria-controls="sidebar" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="#home" class="brand" id="brand-home" aria-label="Beranda N3 Tango 2000">
+        <span class="brand-badge" aria-hidden="true">N3</span>
+        <span class="brand-text">
+          <span class="brand-title">Tango 2000</span>
+          <span class="brand-sub">Edisi Bahasa Indonesia</span>
+        </span>
+      </a>
+      <div class="chapter-picker-wrap">
+        <label for="chapter-select" class="sr-only">Pilih Chapter</label>
+        <select id="chapter-select" class="chapter-select" aria-label="Pilih Chapter untuk ditampilkan">
+          <option value="home">Pilih Chapter...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="topbar-search" role="search">
+      <label for="search-input" class="sr-only">Cari kata, furigana, nomor, atau arti</label>
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="search-input" type="search" placeholder="Cari kanji, kana, arti, atau #nomor..." autocomplete="off" spellcheck="false">
+      <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      <button id="btn-clear-search" class="clear-search-btn" type="button" aria-label="Hapus pencarian" hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="topbar-actions" role="toolbar" aria-label="Alat belajar">
+      <button id="btn-furigana" class="tool-btn" type="button" aria-pressed="true" title="Tampilkan atau sembunyikan furigana (F)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        <span class="tool-label">Furigana</span>
+      </button>
+
+      <button id="btn-mask" class="tool-btn" type="button" aria-pressed="false" title="Mode uji hafalan lembar merah (M)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span class="tool-label">Uji Hafalan</span>
+      </button>
+
+      <button id="btn-flashcard" class="tool-btn" type="button" title="Latihan kartu kilat dari bagian ini">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span class="tool-label">Kartu Kilat</span>
+      </button>
+
+      <span class="topbar-divider" aria-hidden="true"></span>
+
+      <div class="view-mode-group" role="group" aria-label="Pilih mode tampilan kosakata">
+        <button type="button" class="tool-btn view-switch-btn" data-set-view="card" aria-pressed="true" title="Tampilan Mode Kartu (L)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          <span>Mode Kartu</span>
+        </button>
+        <button type="button" class="tool-btn view-switch-btn" data-set-view="list" aria-pressed="false" title="Tampilan Mode List Memanjang ke Bawah (L)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <span>Mode List</span>
+        </button>
+      </div>
+
+      <span class="topbar-divider" aria-hidden="true"></span>
+
+      <div class="theme-squares" role="group" aria-label="Pilih mode tampilan">
+        <button type="button" class="square-mode-btn" data-set-theme="light" aria-pressed="true" aria-label="Mode Light (Terang)" title="Mode Light (Terang)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button type="button" class="square-mode-btn" data-set-theme="sepia" aria-pressed="false" aria-label="Mode Paper (Kertas)" title="Mode Paper (Kertas)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
+        </button>
+        <button type="button" class="square-mode-btn" data-set-theme="dark" aria-pressed="false" aria-label="Mode Dark (Gelap)" title="Mode Dark (Gelap)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+      </div>
+
+      <span class="topbar-divider" aria-hidden="true"></span>
+
+      <button id="btn-settings" class="square-mode-btn" type="button" aria-label="Pengaturan dan data progres" title="Pengaturan">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+
+  <!-- App Shell -->
+  <div class="layout">
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="sidebar" aria-label="Daftar isi buku">
+      <div class="sidebar-header">
+        <div class="progress-summary">
+          <div class="progress-summary-top">
+            <span class="progress-label">Progres Hafalan</span>
+            <span id="sidebar-progress-text" class="progress-num">0 / 1.393</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="1393" aria-valuenow="0" id="sidebar-progress-bar">
+            <div class="progress-fill" id="sidebar-progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <button id="btn-close-sidebar" class="icon-btn mobile-only" type="button" aria-label="Tutup daftar isi">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <div class="nav-group">
+          <a href="#home" class="nav-link" data-route="home">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+            <span>Ringkasan Buku</span>
+          </a>
+          <a href="#all" class="nav-link" data-route="all">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            <span>List Semua Kosakata</span>
+          </a>
+          <a href="#index" class="nav-link" data-route="index">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            <span>Indeks 50 Bunyi (あ〜わ)</span>
+          </a>
+          <a href="#bookmarks" class="nav-link" data-route="bookmarks">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+            <span>Kata Ditandai</span>
+            <span class="nav-count" id="bookmark-count">0</span>
+          </a>
+        </div>
+
+        <div class="nav-heading">Daftar Chapter (1-12)</div>
+        <div id="toc-chapters" class="toc-chapters"></div>
+
+        <div class="nav-heading">Kolom Tambahan</div>
+        <div id="toc-bonus" class="nav-group"></div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" tabindex="-1">
+      <div id="view-container" class="view-container">
+        <div class="loading-state">Memuat buku N3 Tango 2000...</div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Flashcard Modal -->
+  <dialog id="flashcard-modal" class="modal" aria-labelledby="fc-title">
+    <div class="modal-header">
+      <div>
+        <h2 id="fc-title" class="modal-title">Latihan Kartu Kilat</h2>
+        <p id="fc-subtitle" class="modal-subtitle">0 / 0</p>
+      </div>
+      <button id="btn-close-fc" class="icon-btn" type="button" aria-label="Tutup kartu kilat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="fc-body">
+      <div id="fc-card" class="fc-card" tabindex="0" role="button" aria-label="Balik kartu kosakata">
+        <div class="fc-meta">
+          <span id="fc-num" class="word-num">#001</span>
+          <span id="fc-pos" class="pos-group"></span>
+          <button id="fc-speak" class="icon-btn-sm" type="button" aria-label="Putar pelafalan Jepang">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+        </div>
+        <div id="fc-front" class="fc-front"></div>
+        <div id="fc-back" class="fc-back" hidden></div>
+        <p class="fc-hint" id="fc-hint">Klik kartu atau tekan Spasi untuk melihat arti</p>
+      </div>
+      <div class="fc-controls">
+        <button id="fc-prev" class="btn btn-ghost" type="button">Sebelumnya</button>
+        <button id="fc-mark-unknown" class="btn btn-secondary" type="button">Ulangi Lagi</button>
+        <button id="fc-mark-known" class="btn btn-primary" type="button">Sudah Hafal</button>
+        <button id="fc-next" class="btn btn-ghost" type="button">Berikutnya</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Settings Modal -->
+  <dialog id="settings-modal" class="modal" aria-labelledby="settings-title">
+    <div class="modal-header">
+      <h2 id="settings-title" class="modal-title">Pengaturan Tampilan & Data</h2>
+      <button id="btn-close-settings" class="icon-btn" type="button" aria-label="Tutup pengaturan">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="settings-body">
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Bentuk Tampilan Kosakata</div>
+          <div class="setting-desc">Pilih tampilan kartu lengkap atau list memanjang ke bawah.</div>
+        </div>
+        <div class="box-choice-group" role="group" aria-label="Pilihan bentuk tampilan">
+          <button type="button" class="box-choice-btn" data-set-view="card">Kartu</button>
+          <button type="button" class="box-choice-btn" data-set-view="list">List</button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Mode Tampilan</div>
+          <div class="setting-desc">Pilih mode warna yang paling nyaman di mata.</div>
+        </div>
+        <div class="box-choice-group" role="group" aria-label="Pilihan mode tampilan">
+          <button type="button" class="box-choice-btn" data-set-theme="light">Light</button>
+          <button type="button" class="box-choice-btn" data-set-theme="sepia">Paper</button>
+          <button type="button" class="box-choice-btn" data-set-theme="dark">Dark</button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Ukuran Huruf</div>
+          <div class="setting-desc">Atur ukuran huruf Jepang dan terjemahan.</div>
+        </div>
+        <div class="box-choice-group" role="group" aria-label="Pilihan ukuran huruf">
+          <button type="button" class="box-choice-btn" data-set-scale="sm">Kecil</button>
+          <button type="button" class="box-choice-btn" data-set-scale="md">Sedang</button>
+          <button type="button" class="box-choice-btn" data-set-scale="lg">Besar</button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Mode Uji Hafalan (Lembar Merah)</div>
+          <div class="setting-desc">Pilih bagian yang ditutup saat Mode Uji aktif.</div>
+        </div>
+        <div class="box-choice-group" role="group" aria-label="Pilihan mode uji">
+          <button type="button" class="box-choice-btn" data-set-maskmode="meaning">Arti</button>
+          <button type="button" class="box-choice-btn" data-set-maskmode="target">Target</button>
+          <button type="button" class="box-choice-btn" data-set-maskmode="both">Semua</button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Cadangkan & Pulihkan Progres</div>
+          <div class="setting-desc">Simpan daftar kata hafal dan tandai ke file JSON.</div>
+        </div>
+        <div class="setting-actions">
+          <button id="btn-export-progress" class="btn btn-secondary" type="button">Unduh Progres</button>
+          <label class="btn btn-secondary" for="import-progress-file">Impor</label>
+          <input id="import-progress-file" type="file" accept="application/json" hidden>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Pintasan Keyboard</div>
+          <div class="setting-desc"><kbd>/</kbd> Cari &middot; <kbd>F</kbd> Furigana &middot; <kbd>M</kbd> Mode Uji &middot; <kbd>[</kbd> / <kbd>]</kbd> Section Sebelum/Berikutnya</div>
+        </div>
+        <button id="btn-print" class="btn btn-secondary" type="button">Cetak Halaman</button>
+      </div>
+
+      <div class="setting-row setting-danger">
+        <div>
+          <div class="setting-label">Reset Progres Belajar</div>
+          <div class="setting-desc">Hapus semua tanda hafal dan bookmark dari browser ini.</div>
+        </div>
+        <button id="btn-reset-progress" class="btn btn-danger" type="button">Reset</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast Live Region -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="data/book-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
